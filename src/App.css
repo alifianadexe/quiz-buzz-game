@@ -33,7 +33,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 .titleContainer {
@@ -68,7 +67,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 260px;
+  height: 200px;
 }
 
 .inputContainer {
