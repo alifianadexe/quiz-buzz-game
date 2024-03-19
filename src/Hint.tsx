@@ -31,7 +31,7 @@ const Hint = (props: any) => {
             <div className={'titleContainer'}>
                 <div><StyledLogoContainer>
                     <StyledLogoLetter>Petunjuk </StyledLogoLetter>
-                    <StyledLogoLetter buzzfeed>Pembelajaran</StyledLogoLetter>
+                    <StyledLogoLetter buzzfeed>Quiz</StyledLogoLetter>
                 </StyledLogoContainer></div>
             </div>
             <Row className="justify-content-md-center m-4">
@@ -45,15 +45,30 @@ const Hint = (props: any) => {
                     </ListGroup>
                 </Col>
             </Row>
-            <div className={'buttonContainer'}>
-                <Link to="/remember">
-                    <input
-                        className={'inputButton'}
-                        type="button"
-                        value="Selanjutnya"
-                    />
-                </Link>
-            </div>
+            <Row className="justify-content-md-center m-4">
+                <Col md={6}>
+                    <div className={'buttonContainer'}>
+                        <Link to="/learning-goal">
+                            <input
+                                className={'inputButton'}
+                                type="button"
+                                value="Kembali"
+                            />
+                        </Link>
+                    </div>
+                </Col>
+                <Col md={6}>
+                    <div className={'buttonContainer'}>
+                        <Link to="/remember">
+                            <input
+                                className={'nextButton'}
+                                type="button"
+                                value="Selanjutnya"
+                            />
+                        </Link>
+                    </div>
+                </Col>
+            </Row>
         </div>
     )
 }

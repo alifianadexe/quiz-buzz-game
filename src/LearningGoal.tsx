@@ -39,22 +39,37 @@ const LearningGoal = (props: any) => {
                     <div className="border p-4">
                         <p className="text-center" style={{ fontSize: '18px', fontWeight: '600' }}>
                             <ol>
-                                <li>Melalui media game edukasi, peserta didik mampu menelaah informasi mengenai ide pokok dan cara mengidentifikasinya.</li>
-                                <li>Melalui game edukasi dan LKPD, peserta didik mampu menemukan ide pokok dalam sebuah paragraf</li>
+                                <li>Melalui media game edukasi, peserta didik mampu menentukan kalimat utama dalam sebuah paragraf.</li>
+                                <li>Melalui game edukasi, peserta didik mampu menemukan ide pokok dalam sebuah paragraf</li>
                             </ol>
                         </p>
                     </div>
                 </Col>
             </Row>
-            <div className={'buttonContainer'}>
-                <Link to="/hint">
-                    <input
-                        className={'inputButton'}
-                        type="button"
-                        value="Selanjutnya"
-                    />
-                </Link>
-            </div>
+            <Row className="justify-content-md-center m-4">
+                <Col md={6}>
+                    <div className={'buttonContainer'}>
+                        <Link to="/guide">
+                            <input
+                                className={'inputButton'}
+                                type="button"
+                                value="Kembali"
+                            />
+                        </Link>
+                    </div>
+                </Col>
+                <Col md={6}>
+                    <div className={'buttonContainer'}>
+                        <Link to="/hint">
+                            <input
+                                className={'nextButton'}
+                                type="button"
+                                value="Selanjutnya"
+                            />
+                        </Link>
+                    </div>
+                </Col>
+            </Row>
         </div>
     )
 }

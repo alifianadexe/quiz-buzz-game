@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ProfilePhoto from "./assets/images/ProfilePhoto.jpg";
 import StockCatPhoto from "./assets/images/StockCatPhoto.jpg";
 import AdditionalCatPhoto from "./assets/images/AdditionalCatPhoto.jpg";
-import CalmSkyPhoto from "./assets/images/CalmSkyPhoto.jpg";
+import BoardBackground from "./assets/images/board1.jpg";
 import GreenEyedCat from "./assets/images/GreenEyedCat.jpg";
 import FirstResultCatImage from "./assets/images/FirstResultCatImage.jpg";
 import SecondResultCatImage from "./assets/images/SecondResultCatImage.jpg";
@@ -33,7 +33,7 @@ const Quiz = (props: any) => {
   const [score, changeScore] = useState(0);
 
   const containerStyle = {
-    backgroundImage: `url('backgif.gif')`,
+    backgroundImage: `url('background2.gif')`,
     width: '100%',
     height: '100%',
     backgroundSize: '100% auto',
@@ -107,13 +107,13 @@ const Quiz = (props: any) => {
           </StyledInstallationSeparator>
           <StyledInstallationInstructions>
             <code>
-              <span>Carilah Ide Pokok disetiap paragraf, Jika salah, kamu tidak bisa mengulanginya :D</span>
+              <span>Kamu Hanya Memiliki Satu Kesempatan Menjawab</span>
             </code>
           </StyledInstallationInstructions>
 
           <BuzzFeedQuiz
-            title={"Permainan Edukasi : Identifikasi Ide Pokok"}
-            description={"Tolong cari ide pokok disetiap paragraf yang ada dengan memilih dari keempat pilihan yang ada"}
+            title={"Quiz Game Edukasi"}
+            description={"Temukan Kalimat Utama Ataupun Ide Pokoknya!"}
             byline={true}
             bylineAuthor={"Zirly Fiera Qonitatsani"}
             bylineAuthorLink={"https://alifianadexe.com"}
@@ -148,14 +148,16 @@ const Quiz = (props: any) => {
             copyShareLink={"This text was copied using the copyShareLink prop."}
             questions={[
               {
-                question: "Bencana banjir lumpur akibat jebolnya tanggul Situ Gintung di Tangerang Selatan menimbulkan berbagai macam penyakit. Beberapa penyakit yang akan timbul sesudah bencana adalah diare, tifus, leptospirosis dan demam berdarah. Masalah kesehatan pada korban dan masyarkat di sekitar lokasi lokasi bencana harus segera diantisipasi. Beberapa penyakit itu muncul karena lingkungan kotor dan sumber air bersih yang tercemar lumpur",
+                question: "1) Bencana banjir lumpur akibat jebolnya tanggul Situ Gintung di Tangerang Selatan menimbulkan berbagai macam penyakit. 2) Beberapa penyakit yang akan timbul sesudah bencana adalah diare, tifus, leptospirosis dan demam berdarah. 3) Masalah kesehatan pada korban dan masyarakat di sekitar lokasi lokasi bencana harus segera diantisipasi. 4) Beberapa penyakit itu muncul karena lingkungan kotor dan sumber air bersih yang tercemar lumpur.",
                 answerArrangement: "row",
                 backgroundColor:
                   "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
-                fontColor: "#fff",
+                fontColor: "#ffffff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://mamikos.com/info/contoh-soal-ide-pokok-paragraf-pljr/",
                 answers: [
                   {
-                    answer: "A. Bencana banjir menimbulkan berbagai penyakit",
+                    answer: "A. Kalimat Pertama",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       changeScore(score + 10)
                       correctSound()
@@ -169,7 +171,7 @@ const Quiz = (props: any) => {
                     resultID: 1,
                   },
                   {
-                    answer: "B. Bencana banjir menyebabkan sumber air bersih tercemar.",
+                    answer: "B. Kalimat Kedua.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -181,7 +183,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "C. Bencana banjir di tanggul Situ Gintung.",
+                    answer: "C. Kalimat Ketiga.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -193,7 +195,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "D. Bencana banjir di tanggul Situ Gintung.",
+                    answer: "D. Kalimat Keempat.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -207,14 +209,16 @@ const Quiz = (props: any) => {
                 ],
               },
               {
-                question: "Bahan bakar minyak memiliki berbagai kegunaan. Sepeda motor menggunakan bahan bakar pertalite. Kendaraan bermesin diesel menggunakan bahan bakar solar. Pesawat terbang menggunakan avtur sebagai bahan bakar. Ibu rumah tangga menggunakan minyak tanah sebagai bahan bakar kompor minyak.",
+                question: "1) Bahan bakar minyak memiliki berbagai kegunaan. Sepeda motor menggunakan bahan bakar pertalite. 2) Kendaraan bermesin diesel menggunakan bahan bakar solar. 3) Pesawat terbang menggunakan avtur sebagai bahan bakar. 4) Ibu rumah tangga menggunakan minyak tanah sebagai bahan bakar kompor minyak.",
                 answerArrangement: "row",
                 backgroundColor:
                   "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
                 fontColor: "#fff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://katadata.co.id/lifestyle/varia/6572bdee7834c/10-contoh-soal-ide-pokok-paragraf-beserta-kunci-jawaban/",
                 answers: [
                   {
-                    answer: "A. Kegunaan bahan bakar minyak",
+                    answer: "A. Kalimat Pertama",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       changeScore(score + 10)
                       correctSound()
@@ -222,12 +226,13 @@ const Quiz = (props: any) => {
                         title: "Benar!",
                         text: "Kamu Menjawab Dengan Benar! Score +10",
                         icon: "success"
-                      })
+                      }
+                      )
                     },
                     resultID: 1,
                   },
                   {
-                    answer: "B. Berbagai jenis kendaraan.",
+                    answer: "B. Kalimat Kedua.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -239,7 +244,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "C. Bahan bakar rumah tangga.",
+                    answer: "C. Kalimat Ketiga.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -251,7 +256,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "D. Manfaat pertalite dan minyak tanah.",
+                    answer: "D. Kalimat Keempat.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -265,11 +270,13 @@ const Quiz = (props: any) => {
                 ],
               },
               {
-                question: "Cara mendaur ulang koran bekas cukup mudah, yaitu dengan merendam kertas koran yang sudah disobek ke dalam ember berisi air selama sehari semalam. Kemudian, koran tersebut diblender dan diaduk dengan lem. Hasil daur ulang koran tersebut dapat dibentuk menjadi berbagai kreasi.",
+                question: "1) Cara mendaur ulang koran bekas cukup mudah, yaitu dengan merendam kertas koran yang sudah disobek ke dalam ember berisi air selama sehari semalam. 2) Kemudian, koran tersebut diblender dan diaduk dengan lem. 3) Hasil daur ulang koran tersebut dapat dibentuk menjadi berbagai kreasi.",
                 answerArrangement: "row",
                 backgroundColor:
                   "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
                 fontColor: "#fff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://katadata.co.id/lifestyle/varia/6572bdee7834c/10-contoh-soal-ide-pokok-paragraf-beserta-kunci-jawaban/",
                 answers: [
                   {
                     answer: "A. Manfaat daur ulang koran bekas ",
@@ -323,11 +330,13 @@ const Quiz = (props: any) => {
                 ],
               },
               {
-                question: "Korban virus Covid 19 di Indonesia terus bertambah seiring dengan meningkatnya mobilitas masyarakat saat hari raya Idul Fitri dan Idul Adha. Pemerintah terus berupaya menekan laju mobilitas masyarakat dengan melakukan banyak pembatasan dan penyekatan",
+                question: "1) Korban virus Covid 19 di Indonesia terus bertambah seiring dengan meningkatnya mobilitas masyarakat saat hari raya Idul Fitri dan Idul Adha. 2) Pemerintah terus berupaya menekan laju mobilitas masyarakat dengan melakukan banyak pembatasan dan penyekatan.",
                 answerArrangement: "row",
                 backgroundColor:
                   "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
                 fontColor: "#fff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://katadata.co.id/lifestyle/varia/6572bdee7834c/10-contoh-soal-ide-pokok-paragraf-beserta-kunci-jawaban/",
                 answers: [
                   {
                     answer: "A. Meningkatnya virus Covid 19 saat hari raya Idul Fitri dan Idul Adha ",
@@ -381,14 +390,17 @@ const Quiz = (props: any) => {
                 ],
               },
               {
-                question: "Adanya mata pelajaran Teknologi Informasi dan Komunikasi (TIK) di sekolah sangat membantu masyarakat melek teknologi. Terbukti anak-anak usia sekolah dasar sudah banyak yang mampu mengoperasikan komputer. Sayangnya, mata pelajaran ini dianggap tidak penting oleh sebagian besar orang tua murid. Akibatnya, anak-anak tidak memahami penjelasan guru di sekolah dan selalu mendapat nilai rendah",
+                question: "1) Adanya mata pelajaran Teknologi Informasi dan Komunikasi (TIK) di sekolah sangat membantu masyarakat melek teknologi. 2) Terbukti anak-anak usia sekolah dasar sudah banyak yang mampu mengoperasikan komputer. 3) Sayangnya, mata pelajaran ini dianggap tidak penting oleh sebagian besar orang tua murid. 4) Akibatnya, anak-anak tidak memahami penjelasan guru di sekolah dan selalu mendapat nilai rendah.",
                 answerArrangement: "row",
                 backgroundColor:
                   "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
                 fontColor: "#fff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://mamikos.com/info/contoh-soal-ide-pokok-paragraf-pljr/",
+
                 answers: [
                   {
-                    answer: "A. Pelajaran TIK membantu mendukung masyarakat yang lebih melek teknologi",
+                    answer: "A. Kalimat Pertama",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       changeScore(score + 10)
                       correctSound()
@@ -396,12 +408,13 @@ const Quiz = (props: any) => {
                         title: "Benar!",
                         text: "Kamu Menjawab Dengan Benar! Score +10",
                         icon: "success"
-                      })
+                      }
+                      )
                     },
                     resultID: 1,
                   },
                   {
-                    answer: "B. Pelajaran TIK tidak penting karena membuat anak-anak mendapat nilai rendah.",
+                    answer: "B. Kalimat Kedua.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -413,7 +426,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "C. Masyarakat menjadi melek teknologi karena di sekolah wajib belajar TIK.",
+                    answer: "C. Kalimat Ketiga.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -425,7 +438,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "D. Orang tua menganggap pelajaran TIK tidak terlalu penting bagi anak-anak.",
+                    answer: "D. Kalimat Keempat.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -439,14 +452,28 @@ const Quiz = (props: any) => {
                 ],
               },
               {
-                question: "Kucing termasuk salah satu hewan karnivora yang bisa dipelihara. Demikian juga dengan beberapa jenis anjing. Meski keduanya memakan daging dan memiliki taring serta kuku yang tajam, karakter dua hewan ini bisa dijinakkan. Ini membuktikan bahwa tidak semua hewan karnivora itu buas dan berbahaya bagi kehidupan manusia",
+                question: "1) Kucing termasuk salah satu hewan karnivora yang bisa dipelihara. 2) Demikian juga dengan beberapa jenis anjing. 3) Meski keduanya memakan daging dan memiliki taring serta kuku yang tajam, karakter dua hewan ini bisa dijinakkan. 4) Ini membuktikan bahwa tidak semua hewan karnivora itu buas dan berbahaya bagi kehidupan manusia.",
                 answerArrangement: "row",
                 backgroundColor:
                   "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
                 fontColor: "#fff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://mamikos.com/info/contoh-soal-ide-pokok-paragraf-pljr/",
                 answers: [
                   {
-                    answer: "A. Kucing adalah hewan karnivora yang bisa dipelihara.",
+                    answer: "A. Kalimat Pertama",
+                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
+                      Swal.fire({
+                        title: "Salah!",
+                        text: "Maaf, Jawaban Kamu Salah",
+                        icon: "error"
+                      })
+                      failSound()
+                    },
+                    resultID: 1,
+                  },
+                  {
+                    answer: "B. Kalimat Kedua.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -458,7 +485,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "B. Ada beberapa jenis anjing yang bisa dipelihara.",
+                    answer: "C. Kalimat Ketiga.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -470,19 +497,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "C. Kucing dan anjing memiliki taring serta kuku yang tajam.",
-                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
-                      Swal.fire({
-                        title: "Salah!",
-                        text: "Maaf, Jawaban Kamu Salah",
-                        icon: "error"
-                      })
-                      failSound()
-                    },
-                    resultID: 0,
-                  },
-                  {
-                    answer: "D. Tidak semua hewan karnivora berbahaya bagi kehidupan manusia",
+                    answer: "D. Kalimat Keempat.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       changeScore(score + 10)
                       correctSound()
@@ -490,18 +505,21 @@ const Quiz = (props: any) => {
                         title: "Benar!",
                         text: "Kamu Menjawab Dengan Benar! Score +10",
                         icon: "success"
-                      })
+                      }
+                      )
                     },
-                    resultID: 1,
+                    resultID: 0,
                   },
                 ],
               },
               {
-                question: "Kecelakaan yang melibatkan bus dan truk di Jalan Negara-Gilimanuk menimbulkan kemacetan panjang sejauh 1 kilometer. Kecelakaan ini terjadi karena sopir truk sedang mabuk akibat mengonsumsi minuman keras sebelum berkendara. Ketika berada di Jalan Negara-Gilimanuk kilometer 20, bus melaju dari arah yang berlawanan. Sementara truk justru berpindah haluan di jalur kanan dan seketika kecelakaan hebat terjadi. Posisi bus mengguling ke tengah jalan sehingga tidak bisa dilewati kendaraan yang melintas",
+                question: "1) Kecelakaan yang melibatkan bus dan truk di Jalan Negara-Gilimanuk menimbulkan kemacetan panjang sejauh 1 kilometer. 2) Kecelakaan ini terjadi karena sopir truk sedang mabuk akibat mengonsumsi minuman keras sebelum berkendara. 3) Ketika berada di Jalan Negara-Gilimanuk kilometer 20, bus melaju dari arah yang berlawanan. 4) Sementara truk justru berpindah haluan di jalur kanan dan seketika kecelakaan hebat terjadi. 5) Posisi bus mengguling ke tengah jalan sehingga tidak bisa dilewati kendaraan yang melintas.",
                 answerArrangement: "row",
                 backgroundColor:
                   "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
                 fontColor: "#fff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://mamikos.com/info/contoh-soal-ide-pokok-paragraf-pljr/",
                 answers: [
                   {
                     answer: "A. Kecelakaan bus dan truk terjadi akibat sopir truk sedang mabuk.",
@@ -555,15 +573,28 @@ const Quiz = (props: any) => {
                 ],
               },
               {
-                question: "Lidah buaya adalah salah satu tanaman hias yang bisa dipelihara pada ruangan tertutup. Ada juga tanaman Monstera dan Anthurium yang tetap indah meski dibudidayakan dalam ruangan. Meski mendapatkan sedikit cahaya matahari, tanaman-tanaman hias ini tetap bisa tumbuh subur tanpa mengurangi keindahan tampilannya. Ini menjadi bukti bahwa tidak semua tanaman hias yang indah dan kaya manfaat sulit dibudidayakan di dalam ruangan",
+                question: "1) Lidah buaya adalah salah satu tanaman hias yang bisa dipelihara pada ruangan tertutup. 2) Ada juga tanaman Monstera dan Anthurium yang tetap indah meski dibudidayakan dalam ruangan. 3) Meski mendapatkan sedikit cahaya matahari, tanaman-tanaman hias ini tetap bisa tumbuh subur tanpa mengurangi keindahan tampilannya. 4) Ini menjadi bukti bahwa tidak semua tanaman hias yang indah dan kaya manfaat sulit dibudidayakan di dalam ruangan.",
                 answerArrangement: "row",
                 backgroundColor:
                   "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
                 fontColor: "#fff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://mamikos.com/info/contoh-soal-ide-pokok-paragraf-pljr/",
                 answers: [
-
                   {
-                    answer: "A. Lidah buaya adalah tanaman hias yang bisa dipelihara di ruangan tertutup.",
+                    answer: "A. Kalimat Pertama",
+                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
+                      Swal.fire({
+                        title: "Salah!",
+                        text: "Maaf, Jawaban Kamu Salah",
+                        icon: "error"
+                      })
+                      failSound()
+                    },
+                    resultID: 1,
+                  },
+                  {
+                    answer: "B. Kalimat Kedua.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -575,7 +606,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "B.  Monstera dan Anthurium termasuk salah satu tanaman yang bisa dibudidayakan dalam ruangan.",
+                    answer: "C. Kalimat Ketiga.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -587,19 +618,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "C. Tanaman hias tetap bisa tumbuh subur walaupun tidak mendapatkan cahaya matahari.",
-                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
-                      Swal.fire({
-                        title: "Salah!",
-                        text: "Maaf, Jawaban Kamu Salah",
-                        icon: "error"
-                      })
-                      failSound()
-                    },
-                    resultID: 0,
-                  },
-                  {
-                    answer: "D. Tidak semua tanaman hias sulit dibudidayakan di dalam ruangan",
+                    answer: "D. Kalimat Keempat.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       changeScore(score + 10)
                       correctSound()
@@ -607,21 +626,24 @@ const Quiz = (props: any) => {
                         title: "Benar!",
                         text: "Kamu Menjawab Dengan Benar! Score +10",
                         icon: "success"
-                      })
+                      }
+                      )
                     },
                     resultID: 1,
                   },
                 ],
               },
               {
-                question: "Mendengarkan musik termasuk salah satu kegiatan yang bisa mengalirkan energi positif bagi yang melakukannya. Orang yang malas atau sedih seketika bersemangat ketika mendengar musik. Bahkan beberapa studi ilmiah sudah membuktikan adanya dampak positif dari musik sehingga sebagian menjadikan musik sebagai media terapi. Meski begitu, jenis musik sebenarnya juga mempengaruhi dampak yang diberikan. Kalau musiknya mengandung ajakan negatif bisa saja dampak yang ditimbulkan juga negatif",
+                question: "1) Mendengarkan musik termasuk salah satu kegiatan yang bisa mengalirkan energi positif bagi yang melakukannya. 2) Orang yang malas atau sedih seketika bersemangat ketika mendengar musik. 3) Bahkan beberapa studi ilmiah sudah membuktikan adanya dampak positif dari musik sehingga sebagian menjadikan musik sebagai media terapi. 4) Meski begitu, jenis musik sebenarnya juga mempengaruhi dampak yang diberikan. 5) Kalau musiknya mengandung ajakan negatif bisa saja dampak yang ditimbulkan juga negatif.",
                 answerArrangement: "row",
                 backgroundColor:
                   "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
                 fontColor: "#fff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://mamikos.com/info/contoh-soal-ide-pokok-paragraf-pljr/",
                 answers: [
                   {
-                    answer: "A. Mendengarkan musik adalah kegiatan yang bisa mengalirkan energi positif",
+                    answer: "A. Kalimat Pertama",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       changeScore(score + 10)
                       correctSound()
@@ -629,12 +651,13 @@ const Quiz = (props: any) => {
                         title: "Benar!",
                         text: "Kamu Menjawab Dengan Benar! Score +10",
                         icon: "success"
-                      })
+                      }
+                      )
                     },
                     resultID: 1,
                   },
                   {
-                    answer: "B. Musik yang mengandung ajakan negatif bisa memberikan dampak negatif.",
+                    answer: "B. Kalimat Kedua.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -646,7 +669,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "C. Orang yang malas dan sedih bisa bersemangat dengan mendengar musik.",
+                    answer: "C. Kalimat Ketiga.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -658,7 +681,7 @@ const Quiz = (props: any) => {
                     resultID: 0,
                   },
                   {
-                    answer: "D. Jenis musik sangat mempengaruhi dampak yang diberikan dari musik.",
+                    answer: "D. Kalimat Keempat.",
                     onAnswerSelection: (questionIndex, answerIndex, resultID) => {
                       Swal.fire({
                         title: "Salah!",
@@ -672,11 +695,13 @@ const Quiz = (props: any) => {
                 ],
               },
               {
-                question: "Selat Bali menjadi salah satu area lautan yang dianggap keramat oleh masyarakat Indonesia. Pasalnya, sudah banyak kapal laut dan kapal selam yang tenggelam tepat di selat ini. Anehnya, sebagian besar kecelakaan yang terjadi di selat ini selalu memakan korban yang meninggal dan hilang. Bahkan tenggelamnya kapal selam Nanggala yang menyisakan duka juga terjadi di titik selat Bali yang sama",
+                question: "1) Selat Bali menjadi salah satu area lautan yang dianggap keramat oleh masyarakat Indonesia. 2) Pasalnya, sudah banyak kapal laut dan kapal selam yang tenggelam tepat di selat ini. 3) Anehnya, sebagian besar kecelakaan yang terjadi di selat ini selalu memakan korban yang meninggal dan hilang. 4) Bahkan tenggelamnya kapal selam Nanggala yang menyisakan duka juga terjadi di titik selat Bali yang sama.",
                 answerArrangement: "row",
                 backgroundColor:
                   "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
                 fontColor: "#fff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://mamikos.com/info/contoh-soal-ide-pokok-paragraf-pljr/",
                 answers: [
 
                   {
@@ -730,6 +755,127 @@ const Quiz = (props: any) => {
                   },
                 ],
               },
+              {
+                question: "1) Pasokan listrik pada musim penghujan sering terganggu. 2) Hujan lebat dan angin ribut dapat menyebabkan pohon-pohon di beberapa ruas jalan tumbang dan menimpa kabel listrik. 3) Untuk mempercepat perbaikan jaringan listrik. 4) PLN melakukan pemadaman listrik sementara.",
+                answerArrangement: "row",
+                backgroundColor:
+                  "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
+                fontColor: "#fff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://katadata.co.id/lifestyle/varia/6572bdee7834c/10-contoh-soal-ide-pokok-paragraf-beserta-kunci-jawaban",
+                answers: [
+                  {
+                    answer: "A. Pengaruh hujan terhadap pasokan listrik",
+                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
+                      changeScore(score + 10)
+                      correctSound()
+                      Swal.fire({
+                        title: "Benar!",
+                        text: "Kamu Menjawab Dengan Benar! Score +10",
+                        icon: "success"
+                      })
+                    },
+                    resultID: 1,
+                  },
+                  {
+                    answer: "B. Pemadaman listrik sementara oleh PLN.",
+                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
+                      Swal.fire({
+                        title: "Salah!",
+                        text: "Maaf, Jawaban Kamu Salah",
+                        icon: "error"
+                      })
+                      failSound()
+                    },
+                    resultID: 0,
+                  },
+                  {
+                    answer: "C. Rusaknya alat listrik karena hujan dan angin.",
+                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
+                      Swal.fire({
+                        title: "Salah!",
+                        text: "Maaf, Jawaban Kamu Salah",
+                        icon: "error"
+                      })
+                      failSound()
+                    },
+                    resultID: 0,
+                  },
+                  {
+                    answer: "D. Gangguan pasokan listrik pada musim penghujan.",
+                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
+                      Swal.fire({
+                        title: "Salah!",
+                        text: "Maaf, Jawaban Kamu Salah",
+                        icon: "error"
+                      })
+                      failSound()
+                    },
+                    resultID: 0,
+                  },
+                ],
+              },
+              {
+                question: "1) Penyemenan dan pengaspalan jalan dapat menghambat peresapan air hujan. 2) Pembangunan perumahan di lahan produktif juga dapat menimbulkan masalah serupa. 3) Air tanah akan semakin berkurang dengan adanya penebangan hutan secara liar. 4) Semua itu merupakan perilaku manusia yang memengaruhi siklus air.",
+                answerArrangement: "row",
+                backgroundColor:
+                  "linear-gradient(180deg, rgba(153,52,170,1) 0%, rgba(193,51,131,1) 100%)",
+                fontColor: "#fff",
+                backgroundImageSrc: BoardBackground,
+                imageAttribution: "Sumber : https://katadata.co.id/lifestyle/varia/6572bdee7834c/10-contoh-soal-ide-pokok-paragraf-beserta-kunci-jawaban",
+                answers: [
+                  {
+                    answer: "A. Kalimat Pertama",
+                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
+                      Swal.fire({
+                        title: "Salah!",
+                        text: "Maaf, Jawaban Kamu Salah",
+                        icon: "error"
+                      })
+                      failSound()
+                    },
+                    resultID: 1,
+                  },
+                  {
+                    answer: "B. Kalimat Kedua.",
+                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
+                      Swal.fire({
+                        title: "Salah!",
+                        text: "Maaf, Jawaban Kamu Salah",
+                        icon: "error"
+                      })
+                      failSound()
+                    },
+                    resultID: 0,
+                  },
+                  {
+                    answer: "C. Kalimat Ketiga.",
+                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
+                      Swal.fire({
+                        title: "Salah!",
+                        text: "Maaf, Jawaban Kamu Salah",
+                        icon: "error"
+                      })
+                      failSound()
+                    },
+                    resultID: 0,
+                  },
+                  {
+                    answer: "D. Kalimat Keempat.",
+                    onAnswerSelection: (questionIndex, answerIndex, resultID) => {
+                      changeScore(score + 10)
+                      correctSound()
+                      Swal.fire({
+                        title: "Benar!",
+                        text: "Kamu Menjawab Dengan Benar! Score +10",
+                        icon: "success"
+                      }
+                      )
+                    },
+                    resultID: 1,
+                  },
+                ],
+              }
 
             ]}
             results={[

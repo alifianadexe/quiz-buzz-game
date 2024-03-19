@@ -40,15 +40,31 @@ const Guide = (props: any) => {
                     </div>
                 </Col>
             </Row>
-            <div className={'buttonContainer'}>
-                <Link to="/learning-goal">
-                    <input
-                        className={'inputButton'}
-                        type="button"
-                        value="Selanjutnya"
-                    />
-                </Link>
-            </div>
+            <Row className="justify-content-md-center m-4">
+                <Col md={6}>
+                    <div className={'buttonContainer'}>
+                        <Link to="/profile">
+                            <input
+                                className={'inputButton'}
+                                type="button"
+                                value="Kembali"
+                            />
+                        </Link>
+                    </div>
+                </Col>
+                <Col md={6}>
+                    <div className={'buttonContainer'}>
+                        <Link to="/learning-goal">
+                            <input
+                                className={'nextButton'}
+                                type="button"
+                                value="Selanjutnya"
+                            />
+                        </Link>
+                    </div>
+                </Col>
+            </Row>
+
         </div>
     )
 }

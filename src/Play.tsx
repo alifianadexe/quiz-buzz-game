@@ -12,12 +12,13 @@ const Play = (props: any) => {
     const [playSound] = useSound('background.mp3');
 
     const onButtonClick = () => {
-        navigate("guide");
+        playSound();
+        navigate("profile");
     }
 
     useEffect(() => {
         // Play music when the component mounts
-        playSound();
+
     }, []);
 
     const containerStyle = {

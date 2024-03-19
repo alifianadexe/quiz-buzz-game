@@ -134,8 +134,22 @@ h1 {
 }
 
 .rbq_question_overlap_text {
-  font-size: 18px !important;
+  font-size: 22px !important;
+  text-align: justify !important;
 
+}
+
+.rbq_question_image_attribution_text {
+  color: gainsboro;
+  font-size: medium;
+}
+
+.rbq_quiz_title {
+  color: white;
+}
+
+.rbq_quiz_description {
+  color: white;
 }
 
 .score {
@@ -157,9 +171,20 @@ main {
   align-items: center;
 }
 
-input[type='button'] {
+.inputButton {
   border: none;
   background: rgb(252, 67, 67);
+  color: white;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 24px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nextButton {
+  border: none;
+  background: rgb(84, 172, 16);
   color: white;
   padding: 12px 24px;
   margin: 8px;
